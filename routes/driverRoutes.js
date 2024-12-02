@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.post('/', authenticate, authorize(['Admin']), createDriver);
 router.get('/', authenticate, getDrivers);
-router.put('/:driverId', authenticate, authorize(['Admin']), updateDriver);
-router.delete('/:driverId', authenticate, authorize(['Admin']), deleteDriver);
+router.put('/:id', authenticate, authorize(['Admin']), updateDriver);
+router.delete('/:id', authenticate, authorize(['Admin']), deleteDriver);
 
 export default router;
 

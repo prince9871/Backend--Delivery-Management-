@@ -24,7 +24,7 @@ export const createOrder = async (req, res) => {
 export const getOrders = async (req, res) => {
   try {
     const orders = await Order.find();
-    res.status(200).json(orders);
+    res.status(200).json({ message: 'Orders fetched successfully', data: orders });
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch orders', error: err.message });
   }
@@ -36,10 +36,12 @@ export const updateOrder = async (req, res) => {
   const { orderStatus } = req.body;
 
   try {
+    if (!id) return res.status(400).json({ message: 'Order ID is required' });
+    if (!orderStatus) return res.status(400).json({ message: 'Order status is required' });
     const order = await Order.findByIdAndUpdate(id, { orderStatus }, { new: true });
     if (!order) return res.status(404).json({ message: 'Order not found' });
 
-    res.status(200).json(order);
+    res.status(200).json({ message: 'Order updated successfully', data: order });
   } catch (err) {
     res.status(500).json({ message: 'Failed to update order', error: err.message });
   }

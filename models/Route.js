@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const RouteSchema = new mongoose.Schema({
   routeId: { type: String, unique: true, required: true },
-  orderId: { type: mongoose.Schema.Types.ObjectId, ref: 'Order', required: true },
+  orderId: { type: String, ref: 'Order', required: true },
   steps: [
     {
       location: { type: String, required: true },

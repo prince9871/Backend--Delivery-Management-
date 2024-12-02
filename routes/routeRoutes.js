@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.post('/', authenticate, authorize(['Admin']), createRoute);
 router.get('/', authenticate, getRoutes);
-router.put('/:routeId', authenticate, authorize(['Admin']), updateRoute);
-router.delete('/:routeId', authenticate, authorize(['Admin']), deleteRoute);
+router.put('/:id', authenticate, authorize(['Admin']), updateRoute);
+router.delete('/:id', authenticate, authorize(['Admin']), deleteRoute);
 
 export default router;
 

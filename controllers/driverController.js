@@ -16,7 +16,7 @@ export const createDriver = async (req, res) => {
     });
 
     await driver.save();
-    res.status(201).json(driver);
+    res.status(201).json({ message: 'Driver created successfully', data: driver });
   } catch (err) {
     res.status(500).json({ message: 'Failed to create driver', error: err.message });
   }
@@ -26,7 +26,7 @@ export const createDriver = async (req, res) => {
 export const getDrivers = async (req, res) => {
   try {
     const drivers = await Driver.find();
-    res.status(200).json(drivers);
+    res.status(200).json({ message: 'Drivers fetched successfully', data: drivers });
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch drivers', error: err.message });
   }
@@ -41,7 +41,7 @@ export const updateDriver = async (req, res) => {
     const driver = await Driver.findByIdAndUpdate(id, { status }, { new: true });
     if (!driver) return res.status(404).json({ message: 'Driver not found' });
 
-    res.status(200).json(driver);
+    res.status(200).json({ message: 'Driver updated successfully', data: driver });
   } catch (err) {
     res.status(500).json({ message: 'Failed to update driver', error: err.message });
   }
