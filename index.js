@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World 🎉🎉');
+    res.send('Chill 🎉🎉');
 });
 app.get('/new', (req, res) => {
     res.send('New 🎉🎉');
