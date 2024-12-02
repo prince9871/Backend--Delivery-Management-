@@ -22,7 +22,7 @@ export const createRoute = async (req, res) => {
 // Get all routes
 export const getRoutes = async (req, res) => {
   try {
-    const routes = await Route.find().populate('orderId');
+    const routes = await Route.find();
     res.status(200).json(routes);
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch routes', error: err.message });
