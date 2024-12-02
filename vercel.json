@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "name": "basic-upload-test",
-    "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
+    "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.js" }]
   }
