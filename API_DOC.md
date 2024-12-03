@@ -140,7 +140,7 @@ The Delivery Management API facilitates user authentication, driver management, 
     "driverId": "oUY7GZ",
     "customerName": "Ravi Gupta",
     "deliveryAddress": "B-34, 3rd Floor, G.T. Road, Shyam Nagar",
-    "totalAmount": 999.50
+    "totalAmount": 999.5
   }
   ```
 - **Description**: Creates a new order.
@@ -188,15 +188,20 @@ The Delivery Management API facilitates user authentication, driver management, 
     "orderId": "t0SgMR",
     "steps": [
       {
-        "location": "Gujrat",
+        "location": {
+          "latitude": 23.0225,
+          "longitude": 72.5714
+        },
         "timestamp": "2024-12-02T10:00:00Z"
       },
       {
-        "location": "Mumbai",
+        "location": {
+          "latitude": 19.076,
+          "longitude": 72.8777
+        },
         "timestamp": "2024-12-02T12:30:00Z"
       }
-    ],
-    "distanceTraveled": 10
+    ]
   }
   ```
 - **Description**: Creates a new route.
@@ -229,6 +234,3 @@ The Delivery Management API facilitates user authentication, driver management, 
 - Ensure all requests requiring authentication include a valid Authorization token.
 
 ---
-
-
-

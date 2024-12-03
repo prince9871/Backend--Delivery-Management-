@@ -1,20 +1,25 @@
 import Route from '../models/Route.js';
 import { generateUniqueId } from '../utils/generateUniqueId.js'; // Helper function
+import { calculateRouteDistance } from '../utils/calculateRouteDistance.js'; // Distance calculation function
 
 // Create a route
 export const createRoute = async (req, res) => {
-  const { orderId, driverId, steps ,distanceTraveled } = req.body;
+  const { orderId, driverId, steps } = req.body;
 
   try {
+    // Calculate total distance
+    const distanceTraveled = Number(calculateRouteDistance(steps));
+    console.log(distanceTraveled)
     const route = new Route({
       routeId: generateUniqueId(6),
       orderId,
       driverId,
       steps,
-      distanceTraveled
+      distanceTraveled // Automatically calculate and save the distance
     });
 
     await route.save();
+    console.log(`after save : `,route.distanceTraveled); // Log saved value
     res.status(201).json({ message: 'Route created successfully', data: route });
   } catch (err) {
     res.status(500).json({ message: 'Failed to create route', error: err.message });
@@ -34,10 +39,12 @@ export const getRoutes = async (req, res) => {
 // Update a route
 export const updateRoute = async (req, res) => {
   const { id } = req.params;
-  const { status,distanceTraveled } = req.body;
+  const { status } = req.body;
 
   try {
-    const route = await Route.findByIdAndUpdate(id, { status,distanceTraveled }, { new: true });
+    
+
+    const route = await Route.findByIdAndUpdate(id, { status }, { new: true });
     if (!route) return res.status(404).json({ message: 'Route not found' });
 
     res.status(200).json({ message: 'Route updated successfully', data: route });

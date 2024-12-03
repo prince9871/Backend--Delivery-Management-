@@ -117,14 +117,18 @@
 				{
 					"name": "get drivers",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/drivers/",
 							"host": [
@@ -143,6 +147,16 @@
 				{
 					"name": "register",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -153,7 +167,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"Amit Verma\",\r\n  \"email\": \"amit.verma@example.com\",\r\n  \"phone\": \"9876543210\",\r\n  \"vehicleType\": \"Truck\"\r\n}\r\n",
+							"raw": "{\r\n  \"name\": \"Ankit Verma\",\r\n  \"email\": \"ankit.verma@example.com\",\r\n  \"phone\": \"9876543210\",\r\n  \"vehicleType\": \"Van\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -178,14 +192,18 @@
 				{
 					"name": "update driver",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"status\": \"inactive\"\r\n}\r\n",
@@ -196,7 +214,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5001/api/drivers/674d970ca4e4a643728e3a4d",
+							"raw": "localhost:5001/api/drivers/674f0b0ca0062ca175f793cf",
 							"host": [
 								"localhost"
 							],
@@ -204,7 +222,7 @@
 							"path": [
 								"api",
 								"drivers",
-								"674d970ca4e4a643728e3a4d"
+								"674f0b0ca0062ca175f793cf"
 							]
 						}
 					},
@@ -213,16 +231,20 @@
 				{
 					"name": "delete",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "localhost:5001/api/drivers/674d970ca4e4a643728e3a4d",
+							"raw": "localhost:5001/api/drivers/674f0b0ca0062ca175f793cf",
 							"host": [
 								"localhost"
 							],
@@ -230,7 +252,7 @@
 							"path": [
 								"api",
 								"drivers",
-								"674d970ca4e4a643728e3a4d"
+								"674f0b0ca0062ca175f793cf"
 							]
 						}
 					},
@@ -239,14 +261,18 @@
 				{
 					"name": "get Payment",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMTU2MSwiZXhwIjoxNzMzMzE3OTYxfQ.nfrGRxPnJ-QPf_wIWEKr4qIbby2UqcvbQs_WkP5qzFI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/drivers/oUY7GZ/payment",
 							"host": [
@@ -266,14 +292,18 @@
 				{
 					"name": "update onlineTIme",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"onlineTime\": 2\r\n}\r\n",
@@ -303,14 +333,18 @@
 				{
 					"name": "reset onlineTime",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/drivers/66F7Yj/online-time/reset",
 							"host": [
@@ -337,16 +371,17 @@
 					"name": "get orders",
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
 						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/orders/",
 							"host": [
@@ -365,14 +400,18 @@
 				{
 					"name": "create orders",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n   \"driverId\": \"oUY7GZ\",\r\n  \"customerName\": \"Ravi Gupta\",\r\n  \"deliveryAddress\": \"B-34, 3rd Floor, G.T. Road, Shyam Nagar\",\r\n  \"totalAmount\": 999.50\r\n}\r\n",
@@ -400,14 +439,18 @@
 				{
 					"name": "updateOrders",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMTU2MSwiZXhwIjoxNzMzMzE3OTYxfQ.nfrGRxPnJ-QPf_wIWEKr4qIbby2UqcvbQs_WkP5qzFI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"orderStatus\": \"delivered\"\r\n}\r\n",
@@ -435,14 +478,18 @@
 				{
 					"name": "delete order",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/orders/674d938e7c3ef5ce97e290c6?",
 							"host": [
@@ -472,14 +519,18 @@
 				{
 					"name": "get routes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMDc2OCwiZXhwIjoxNzMzMzE3MTY4fQ.DkOKi4z0mXgpZwPdWJYe9QAWaU4B0Jk6PAj-KaE9Is0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/routes",
 							"host": [
@@ -497,17 +548,21 @@
 				{
 					"name": "create routes",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMDc2OCwiZXhwIjoxNzMzMzE3MTY4fQ.DkOKi4z0mXgpZwPdWJYe9QAWaU4B0Jk6PAj-KaE9Is0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"driverId\": \"oUY7GZ\",\r\n  \"orderId\": \"t0SgMR\", \r\n  \"steps\": [\r\n    {\r\n      \"location\": \"Gujrat\",\r\n      \"timestamp\": \"2024-12-02T10:00:00Z\"\r\n    },\r\n    {\r\n      \"location\": \"Mumbai\",\r\n      \"timestamp\": \"2024-12-02T12:30:00Z\"\r\n    }\r\n  ],\r\n  \"distanceTraveled\": 10  // This should be a number, not a string\r\n}\r\n",
+							"raw": "{\r\n  \"driverId\": \"oUY7GZ\",\r\n  \"orderId\": \"t0SgMR\", \r\n  \"steps\": [\r\n    {\r\n      \"location\": {\r\n        \"latitude\": 23.0225,\r\n        \"longitude\": 72.5714\r\n      },\r\n      \"timestamp\": \"2024-12-02T10:00:00Z\"\r\n    },\r\n    {\r\n      \"location\": {\r\n        \"latitude\": 19.0760,\r\n        \"longitude\": 72.8777\r\n      },\r\n      \"timestamp\": \"2024-12-02T12:30:00Z\"\r\n    }\r\n  ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -531,14 +586,18 @@
 				{
 					"name": "update route",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMTU2MSwiZXhwIjoxNzMzMzE3OTYxfQ.nfrGRxPnJ-QPf_wIWEKr4qIbby2UqcvbQs_WkP5qzFI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"status\": \"completed\"\r\n}\r\n",
@@ -549,7 +608,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:5001/api/routes/674ed7ef33f82c7d044e3383",
+							"raw": "localhost:5001/api/routes/674f036d282c2bd0fb76aa50",
 							"host": [
 								"localhost"
 							],
@@ -557,7 +616,7 @@
 							"path": [
 								"api",
 								"routes",
-								"674ed7ef33f82c7d044e3383"
+								"674f036d282c2bd0fb76aa50"
 							]
 						}
 					},
@@ -566,14 +625,18 @@
 				{
 					"name": "delete route",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGVjM2RjODFjZmFkZmIzNjAyZTY1YiIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzIzMzMxMSwiZXhwIjoxNzMzMzE5NzExfQ.oj507QOdguZDBryxm7PK3R1YzUmnTKqHdGkxQD97BoQ",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGQ4ZWJjZGUzNWIyYzQ0OTQ4MjQzNyIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTczMzEzNzI4MCwiZXhwIjoxNzMzMjIzNjgwfQ.StWmnAxLbOy66NjEmeBTqWwL1GZFaJZbBk8E3U0AZZg",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "localhost:5001/api/routes/674dad369ee1957c4cdbb12a?",
 							"host": [

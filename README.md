@@ -65,7 +65,7 @@ To set up and run the project, follow these steps:
 1. **Clone the Repository**: Clone the repository to your local machine.
 2. **Install Dependencies**: Install the dependencies using `npm install` or `yarn install`.
 3. **Configure Environment Variables**: Set up the environment variables in a `.env` file.
-4. **Start the Server**: Start the server using `node index.js` or `nodemon index.js` for development.
+4. **Start the Server**: Start the server using `node index.js`,`npm start` or `nodemon index.js`, `npm run dev` for development.
 
 ## Contributing to the Project
 -----------------------------
