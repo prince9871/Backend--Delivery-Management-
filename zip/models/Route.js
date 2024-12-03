@@ -3,10 +3,6 @@ import mongoose from 'mongoose';
 const RouteSchema = new mongoose.Schema({
   routeId: { type: String, unique: true, required: true },
   orderId: { type: String, ref: 'Order', required: true },
-  driverId: { type: String, ref: 'Driver', required: true },
-  distanceTraveled: { type: Number, required: true }, // Distance in km
-
-
   steps: [
     {
       location: { type: String, required: true },

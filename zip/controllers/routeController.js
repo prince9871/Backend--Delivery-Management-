@@ -3,19 +3,17 @@ import { generateUniqueId } from '../utils/generateUniqueId.js'; // Helper funct
 
 // Create a route
 export const createRoute = async (req, res) => {
-  const { orderId, driverId, steps ,distanceTraveled } = req.body;
+  const { orderId, steps } = req.body;
 
   try {
     const route = new Route({
       routeId: generateUniqueId(6),
       orderId,
-      driverId,
       steps,
-      distanceTraveled
     });
 
     await route.save();
-    res.status(201).json({ message: 'Route created successfully', data: route });
+    res.status(201).json(route);
   } catch (err) {
     res.status(500).json({ message: 'Failed to create route', error: err.message });
   }
@@ -25,7 +23,7 @@ export const createRoute = async (req, res) => {
 export const getRoutes = async (req, res) => {
   try {
     const routes = await Route.find();
-    res.status(200).json({ message: 'Routes fetched successfully', data: routes });
+    res.status(200).json(routes);
   } catch (err) {
     res.status(500).json({ message: 'Failed to fetch routes', error: err.message });
   }
@@ -34,13 +32,13 @@ export const getRoutes = async (req, res) => {
 // Update a route
 export const updateRoute = async (req, res) => {
   const { id } = req.params;
-  const { status,distanceTraveled } = req.body;
+  const { status } = req.body;
 
   try {
-    const route = await Route.findByIdAndUpdate(id, { status,distanceTraveled }, { new: true });
+    const route = await Route.findByIdAndUpdate(id, { status }, { new: true });
     if (!route) return res.status(404).json({ message: 'Route not found' });
 
-    res.status(200).json({ message: 'Route updated successfully', data: route });
+    res.status(200).json(route);
   } catch (err) {
     res.status(500).json({ message: 'Failed to update route', error: err.message });
   }
@@ -54,7 +52,7 @@ export const deleteRoute = async (req, res) => {
     const route = await Route.findByIdAndDelete(id);
     if (!route) return res.status(404).json({ message: 'Route not found' });
 
-    res.status(204).json({ message: 'Route deleted successfully' });
+    res.status(200).json({ message: 'Route deleted successfully' });
   } catch (err) {
     res.status(500).json({ message: 'Failed to delete route', error: err.message });
   }

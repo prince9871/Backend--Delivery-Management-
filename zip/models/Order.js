@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 
 const OrderSchema = new mongoose.Schema({
   orderId: { type: String, unique: true, required: true },
-  driverId: { type: String, ref: 'Driver', required: true },
   customerName: { type: String, required: true },
   deliveryAddress: { type: String, required: true },
   orderStatus: { 
