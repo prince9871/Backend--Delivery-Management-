@@ -10,11 +10,21 @@ This project is a comprehensive delivery management system designed to efficient
 
 * Create, update, and manage orders with unique identifiers.
 
+### Driver Management
+
+* Register, update, and manage drivers.
+
+### Route Management
+
+* Create, update, and manage routes.
+
 ### Route Management
 
 * Assign routes to orders.
 * Track the status of each route.
 * Update the order status accordingly.
+* Calculate the distance of each route. based on the coordinates of the locations. latitude and longitude.
+
 
 ### Real-time Tracking
 

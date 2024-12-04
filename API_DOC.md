@@ -189,15 +189,15 @@ The Delivery Management API facilitates user authentication, driver management, 
     "steps": [
       {
         "location": {
-          "latitude": 23.0225,
-          "longitude": 72.5714
+          "latitude": 23.0225,  // Ahmedabad, India
+          "longitude": 72.5714  // Ahmedabad, India
         },
         "timestamp": "2024-12-02T10:00:00Z"
       },
       {
         "location": {
-          "latitude": 19.076,
-          "longitude": 72.8777
+          "latitude": 19.076,  // Mumbai, India
+          "longitude": 72.8777  // Mumbai, India
         },
         "timestamp": "2024-12-02T12:30:00Z"
       }
